@@ -3,7 +3,7 @@ package gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.beans.binding.Bindings;
+import gui.util.Alerts;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.dao.impl.ProductDaoSQL;
 import model.entities.Product;
@@ -62,7 +63,8 @@ public class MainViewController implements Initializable{
 				products.add(product);
 				tableView.setItems(products);
 			}else {
-				System.out.println("Produto não encontrado ou não Cadastrado.");
+				Alerts.showAlert("ATENÇÃO", "Produto não encontrado ou não Cadastrado.", "Verifique se o código digitado está correto. Caso contrário, entre em contato com o Suporte LE PSTICHE.", AlertType.INFORMATION);
+				
 			}
 			
 		}catch (NumberFormatException e) {
