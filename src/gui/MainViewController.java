@@ -64,11 +64,10 @@ public class MainViewController implements Initializable{
 				tableView.setItems(products);
 			}else {
 				Alerts.showAlert("ATENÇÃO", "Produto não encontrado ou não Cadastrado.", "Verifique se o código digitado está correto. Caso contrário, entre em contato com o Suporte LE PSTICHE.", AlertType.INFORMATION);
-				
 			}
 			
 		}catch (NumberFormatException e) {
-			System.out.println("Cogido Inválido.");
+			Alerts.showAlert("ATENÇÃO", "Código Inválido", "O código digitado está fora de padrão", AlertType.INFORMATION);
 		}
 	}
 
