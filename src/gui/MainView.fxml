@@ -10,22 +10,22 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="199.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
-   <children>
-      <Button fx:id="buttonSearch" layoutX="448.0" layoutY="33.0" mnemonicParsing="false" onAction="#onButtonSearch" prefHeight="39.0" prefWidth="117.0" text="Pesquisar" />
-      <TextField fx:id="textCodProduct" layoutX="186.0" layoutY="33.0" prefHeight="39.0" prefWidth="254.0" />
-      <Label layoutX="39.0" layoutY="39.0" prefHeight="17.0" prefWidth="137.0" text="Digite o Código">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tableView" layoutX="7.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="85.0" prefWidth="587.0">
-        <columns>
-          <TableColumn fx:id="columnDescProduct" prefWidth="404.0" text="Descrição" />
-          <TableColumn fx:id="columnDescManufacturer" prefWidth="182.0" text="Fornecedor" />
-        </columns>
-         <opaqueInsets>
-            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-         </opaqueInsets>
-      </TableView>
-   </children>
+    <children>
+        <TextField fx:id="textCodProduct" focusTraversable="true" layoutX="186.0" layoutY="33.0" prefHeight="39.0" prefWidth="254.0" />
+        <Button fx:id="buttonSearch" layoutX="448.0" layoutY="33.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="117.0" text="Pesquisar" />
+        <Label layoutX="39.0" layoutY="39.0" prefHeight="17.0" prefWidth="137.0" text="Digite o Código">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableView" layoutX="7.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="85.0" prefWidth="587.0">
+            <columns>
+                <TableColumn fx:id="columnDescProduct" prefWidth="358.0" text="Descrição" />
+                <TableColumn fx:id="columnDescManufacturer" prefWidth="228.0" text="Fornecedor" />
+            </columns>
+            <opaqueInsets>
+                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+            </opaqueInsets>
+        </TableView>
+    </children>
 </AnchorPane>
