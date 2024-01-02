@@ -24,12 +24,11 @@ public class ProductDaoSQL implements ProductDao{
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-					"SELECT PRODUTO, DESC_PRODUTO, FABRICANTE FROM PRODUTOS WHERE PRODUTO = ?");
+					"SELECT DESC_PRODUTO, FABRICANTE FROM PRODUTOS WHERE PRODUTO = ?");
 			st.setLong(1, codProduct);
 			rs = st.executeQuery();
 			if (rs.next()) {
 				Product obj = new Product();
-				obj.setCodProduct(rs.getLong("PRODUTO"));
 	            obj.setDescProduct(rs.getString("DESC_PRODUTO"));
 	            obj.setDescManufacturer(rs.getString("FABRICANTE"));
 				return obj;

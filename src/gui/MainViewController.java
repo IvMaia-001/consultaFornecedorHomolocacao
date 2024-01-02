@@ -64,7 +64,7 @@ public class MainViewController implements Initializable {
         textCodProduct.setOnKeyPressed(event -> {
             if (event.getCode().equals(KeyCode.ENTER)) {
                 handleSearch();
-                event.consume(); // Evita que o evento se propague
+                event.consume(); 
             }
         });
 
@@ -72,7 +72,7 @@ public class MainViewController implements Initializable {
             handleSearch();
         });
 
-        textCodProduct.requestFocus(); // Define o foco inicial no campo de pesquisa
+        textCodProduct.requestFocus(); 
     }
 
     private void handleSearch() {

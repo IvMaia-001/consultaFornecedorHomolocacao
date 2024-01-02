@@ -4,6 +4,7 @@ module fonecedorTeste {
 	requires java.sql;
 	requires javafx.graphics;
 	requires javafx.base;
+	requires jdk.incubator.vector;
 	
 	exports gui;
 	opens gui to javafx.fxml;

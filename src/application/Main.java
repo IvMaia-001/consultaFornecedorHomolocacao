@@ -23,7 +23,7 @@ public class Main extends Application {
 			
 			Scene mainScene = new Scene(parant);
 			primaryStage.setScene(mainScene);
-			primaryStage.setTitle("CONSULTA FORNECEDOR LE POSTICHE");
+			primaryStage.setTitle("CONSULTA FORNECEDOR LE POSTICHE - 1.0");
 			primaryStage.show();
 			
 			Connection conn = DB.getconnnectio();
