@@ -24,7 +24,7 @@ public class ProductDaoSQL implements ProductDao{
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-					"SELECT DESC_PRODUTO, FABRICANTE FROM PRODUTOS WHERE PRODUTO = ?");
+					"SELECT DESC_PRODUTO, FABRICANTE FROM PRODUTOS WHERE 1=1 and PRODUTO = ?");
 			st.setLong(1, codProduct);
 			rs = st.executeQuery();
 			if (rs.next()) {
